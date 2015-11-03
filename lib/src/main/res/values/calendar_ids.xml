@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item type="id" name="item_click_support"/>
+    <item type="id" name="custom_cell"/>
+    <item type="id" name="date_text"/>
+    <item type="id" name="day"/>
+
+</resources>
