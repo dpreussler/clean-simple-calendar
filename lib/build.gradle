@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 
+def projectName="clean-simple-calendar"
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
@@ -16,7 +18,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    libraryVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.aar')) {
+                def fileName = "${projectName}-${defaultConfig.versionName}.aar"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
 }
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
