@@ -5,6 +5,6 @@ jdk: oraclejdk7
 android:
   components:
     - build-tools-19.0.0 
-    - android-23.0.1
+    - android-23
 
 script: ./gradlew assembleRelease --info
