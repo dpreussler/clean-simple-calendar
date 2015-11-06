@@ -1,5 +1,7 @@
 package de.jodamob.android.calendar;
 
+import static de.jodamob.android.calendar.CalendarUtil.isSameDay;
+
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.VisibleForTesting;
@@ -45,6 +47,16 @@ public class CalendarAdapter extends RecyclerView.Adapter {
     @Override
     public int getItemCount() {
         return data.getCount();
+    }
+
+    public void select(Day selectedDay) {
+        int count = data.getCount();
+        for (int i=0; i< count; i++) {
+            if (isSameDay(data.getAt(i).getDate(), selectedDay.getDate())) {
+                select(i);
+                return;
+            }
+        }
     }
 
     public void select(int position) {
