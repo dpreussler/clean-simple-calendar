@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import java.util.Date;
+
 import calendar.android.jodamob.de.cleansimplecalendar.R;
 
 public class CalenderWidget extends FrameLayout {
@@ -64,6 +66,15 @@ public class CalenderWidget extends FrameLayout {
         super.onDetachedFromWindow();
     }
 
+    public void select(Date date) {
+        getAdapter().select(new Day(date));
+    }
+
+    @SuppressWarnings("unused")
+    protected CalendarAdapter getAdapter() {
+        return adapter;
+    }
+
     @VisibleForTesting
     void addListener() {
         clickAttacher.attach(contentView, new MyOnItemClickListener());
@@ -112,7 +123,7 @@ public class CalenderWidget extends FrameLayout {
     }
 
     private void onSelection(int position) {
-        adapter.select(position);
+        getAdapter().select(position);
     }
 
     private static class NonScrollableGridLayoutManager extends GridLayoutManager {
