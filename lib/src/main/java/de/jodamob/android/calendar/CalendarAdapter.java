@@ -50,12 +50,9 @@ public class CalendarAdapter extends RecyclerView.Adapter {
     }
 
     public void select(Day selectedDay) {
-        int count = data.getCount();
-        for (int i=0; i< count; i++) {
-            if (isSameDay(data.getAt(i).getDate(), selectedDay.getDate())) {
-                select(i);
-                return;
-            }
+        int position = getPositionOf(selectedDay);
+        if (position >= 0) {
+            select(position);
         }
     }
 
@@ -67,6 +64,16 @@ public class CalendarAdapter extends RecyclerView.Adapter {
     @VisibleForTesting
     void setSelection(int position) {
         this.selectedPosition = position;
+    }
+
+    protected int getPositionOf(Day selectedDay) {
+        int count = data.getCount();
+        for (int i=0; i< count; i++) {
+            if (isSameDay(data.getAt(i).getDate(), selectedDay.getDate())) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     private void fillViewState(int position, int selectedPosition, VisibleMonths data, DayState state) {

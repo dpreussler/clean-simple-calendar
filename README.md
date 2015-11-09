@@ -5,8 +5,14 @@ Time-Square is the ultimate calendar but a but hard to customize
 The alternative Caldroid is based on really unclean code, hard to change, hard to test.
 Also it is used custom selection logic instead of using selection and disabled states of the views.
 
-This one is a simple view, not a fragment and the user has to provide the xml layouts.
-It does support adding custom view holder and adapters but this is not needed.
+
+This one is
+* a simple view, not a fragment
+* item layout xml provided by developer, not incliuded
+* supports adding custom view holder and adapters but not needed.
+* no multiselect
+* supports i8n by different starting days of week
+* no right-to-left for now
 It is just the month widget, no navigation or similar.
 
 
