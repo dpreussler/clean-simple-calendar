@@ -76,5 +76,5 @@ Screenshot from simple_sample (GERMAN Locale)
 ![alt tag](https://cloud.githubusercontent.com/assets/2426606/11047490/003d72ae-8733-11e5-80b6-6506a55bd2ca.png)
 
 Screenshot from styled_sample with custom fields and selection
-![alt tag](https://cloud.githubusercontent.com/assets/2426606/11047490/003d72ae-8733-11e5-80b6-6506a55bd2ca.png)
+![alt tag](https://cloud.githubusercontent.com/assets/2426606/11048790/2df3624c-873a-11e5-8763-0e999b768409.png)
 
