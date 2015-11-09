@@ -68,5 +68,9 @@ example:
 </RelativeLayout>
 ```
 
-Example from simple_sample
+Example from simple_sample (US Locale)
 ![alt tag](https://cloud.githubusercontent.com/assets/2426606/11047357/425b4ffe-8732-11e5-984c-b2154e3f4030.png)
+
+Example from simple_sample (GERMAN Locale)
+![alt tag](https://cloud.githubusercontent.com/assets/2426606/11047490/003d72ae-8733-11e5-80b6-6506a55bd2ca.png)
+
