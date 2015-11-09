@@ -17,8 +17,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         CalenderWidget widget = (CalenderWidget) findViewById(R.id.calendar);
-        widget.set(
-                CalendarDataFactory.getInstance(Locale.getDefault()).create(new Date(), 5),
-                new CalendarBuilder(R.layout.calendar_item, R.layout.calendar_header));
+        widget.set(new CalendarBuilder(R.layout.calendar_item, R.layout.calendar_header));
     }
 }

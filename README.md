@@ -23,9 +23,18 @@ Call
 
 ```java
 calendarWidget.set(
-	CalendarDataFactory.getInstance(Locale.getDefault()).create(new Date(), 6)
 	new CalendarBuilder(R.layout.calendar_item_layout, R.layout.calendar_header_layout));
 ```
+
+or set more implicit the shown month:
+```java
+calendarWidget.set(
+CalendarDataFactory.getInstance(Locale.getDefault()).create(date, ROWS),
+	new CalendarBuilder(R.layout.calendar_item_layout, R.layout.calendar_header_layout));
+```
+where date is a date for the month to show and ROWS an int naming the number of rows to be shown (6 is default, 4 should be minimum)
+
+
 
 done.
 

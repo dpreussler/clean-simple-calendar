@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import java.util.Date;
+import java.util.Locale;
 
 import calendar.android.jodamob.de.cleansimplecalendar.R;
 
@@ -47,6 +48,10 @@ public class CalenderWidget extends FrameLayout {
 
     public int getRowCount() {
         return ROW_COUNT;
+    }
+
+    public void set(CalendarBuilder factory) {
+        set(CalendarDataFactory.getInstance(Locale.getDefault()).create(new Date(), ROW_COUNT), factory);
     }
 
     public void set(VisibleMonths months, CalendarBuilder factory) {
