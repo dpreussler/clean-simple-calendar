@@ -8,11 +8,14 @@ Also it is used custom selection logic instead of using selection and disabled s
 
 This one is
 * a simple view, not a fragment
-* item layout xml provided by developer, not incliuded
-* no multiselect
+* item layout xml provided by developer, not included
 * supports i8n by different starting days of week
+* support selection (style via xml selected state)
+* shows last/first days of surrounding months where needed (row count configurable, style via xml disabled-state)
+* marks today
 * supports adding custom view holder and adapters but not needed (see styled_sample)
 * no right-to-left for now
+* no multiselect
 
 It is just the month widget, no navigation or similar.
 
