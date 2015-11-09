@@ -58,6 +58,12 @@ public class CalendarUtil {
                 cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR);
     }
 
+    public static boolean isSameDayIgnoreYear(Date date1, Date date2) {
+        Calendar cal1 = buildFromDate(date1);
+        Calendar cal2 = buildFromDate(date2);
+        return cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR);
+    }
+
     private static Calendar buildFromDate(Date from) {
         Calendar c = Calendar.getInstance();
         c.setTime(from);

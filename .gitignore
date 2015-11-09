@@ -8,3 +8,4 @@
 .idea
 *.iml
 lib/build
+styled_sample/build

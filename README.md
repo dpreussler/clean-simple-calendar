@@ -9,10 +9,11 @@ Also it is used custom selection logic instead of using selection and disabled s
 This one is
 * a simple view, not a fragment
 * item layout xml provided by developer, not incliuded
-* supports adding custom view holder and adapters but not needed.
 * no multiselect
 * supports i8n by different starting days of week
+* supports adding custom view holder and adapters but not needed (see styled_sample)
 * no right-to-left for now
+
 It is just the month widget, no navigation or similar.
 
 
@@ -68,9 +69,12 @@ example:
 </RelativeLayout>
 ```
 
-Example from simple_sample (US Locale)
+Screenshot from simple_sample (US Locale)
 ![alt tag](https://cloud.githubusercontent.com/assets/2426606/11047357/425b4ffe-8732-11e5-984c-b2154e3f4030.png)
 
-Example from simple_sample (GERMAN Locale)
+Screenshot from simple_sample (GERMAN Locale)
+![alt tag](https://cloud.githubusercontent.com/assets/2426606/11047490/003d72ae-8733-11e5-80b6-6506a55bd2ca.png)
+
+Screenshot from styled_sample with custom fields and selection
 ![alt tag](https://cloud.githubusercontent.com/assets/2426606/11047490/003d72ae-8733-11e5-80b6-6506a55bd2ca.png)
 
