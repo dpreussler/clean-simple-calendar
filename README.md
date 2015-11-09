@@ -16,6 +16,7 @@ This one is
 It is just the month widget, no navigation or similar.
 
 
+
 Quick start:
 ============
 Add the 'CalendarWidget' to your layout.
@@ -66,3 +67,6 @@ example:
 	    android:layout_height="wrap_parent"/>
 </RelativeLayout>
 ```
+
+Example from simple_sample
+![alt tag](https://cloud.githubusercontent.com/assets/2426606/11047357/425b4ffe-8732-11e5-984c-b2154e3f4030.png)
