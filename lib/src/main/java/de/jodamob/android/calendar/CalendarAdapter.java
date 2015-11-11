@@ -57,8 +57,10 @@ public class CalendarAdapter extends RecyclerView.Adapter {
     }
 
     public void select(int position) {
+        int oldSelection = selectedPosition;
         setSelection(position);
-        notifyDataSetChanged();
+        notifyItemChanged(oldSelection);
+        notifyItemChanged(selectedPosition);
     }
 
     @VisibleForTesting
