@@ -70,14 +70,7 @@ public class CalenderWidgetTest {
     public void should_unregister() {
         ItemClickAttacher attacher = mock(ItemClickAttacher.class);
         tested.setItemClickAttacher(attacher);
-        try {
-            tested.onDetachedFromWindow();
-        } catch(RuntimeException e) {
-            // get around a problem in library projects aith junit
-            // https://code.google.com/p/android/issues/detail?id=178541
-            // "java.lang.RuntimeException: Method onDetachedFromWindow in android.view.ViewGroup not mocked."
-            e.printStackTrace();
-        }
+        tested.onDetachedFromWindow();
         verify(attacher).detach(any(RecyclerView.class));
     }
 }
