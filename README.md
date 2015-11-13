@@ -11,11 +11,11 @@ This one is
 * item layout xml provided by developer, not included
 * supports i8n by different starting days of week
 * support selection (style via xml selected state)
-* support right-to-left
 * shows last/first days of surrounding months where needed (row count configurable, style via xml disabled-state)
 * marks today
 * supports adding custom view holder and adapters but not needed (see styled_sample)
 * no multiselect
+* no right-to-left (in progress)
 
 It is just the month widget, no navigation or similar.
 

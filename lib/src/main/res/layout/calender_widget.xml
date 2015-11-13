@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <de.jodamob.android.calendar.RTLAwareRecyclerView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="20dp"/>
 
-    <de.jodamob.android.calendar.RTLAwareRecyclerView
+    <android.support.v7.widget.RecyclerView
         android:paddingTop="10dp"
         android:id="@+id/content"
         android:layout_width="match_parent"
