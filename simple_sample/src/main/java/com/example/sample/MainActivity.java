@@ -3,11 +3,7 @@ package com.example.sample;
 import android.app.Activity;
 import android.os.Bundle;
 
-import java.util.Date;
-import java.util.Locale;
-
 import de.jodamob.android.calendar.CalendarBuilder;
-import de.jodamob.android.calendar.CalendarDataFactory;
 import de.jodamob.android.calendar.CalenderWidget;
 
 public class MainActivity extends Activity {

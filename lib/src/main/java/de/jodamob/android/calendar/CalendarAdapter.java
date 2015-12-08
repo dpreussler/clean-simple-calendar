@@ -44,6 +44,10 @@ public class CalendarAdapter extends RecyclerView.Adapter {
     protected void addCustomData(CalendarDayViewHolder viewHolder, Day day) {
     }
 
+    protected  int getSelectedPosition() {
+        return selectedPosition;
+    }
+
     @Override
     public int getItemCount() {
         return data.getCount();

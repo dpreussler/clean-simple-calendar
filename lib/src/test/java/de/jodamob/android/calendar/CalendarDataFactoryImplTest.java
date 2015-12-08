@@ -7,10 +7,7 @@ import org.junit.Test;
 import java.util.Calendar;
 import java.util.Locale;
 
-import de.jodamob.android.calendar.CalendarDataFactory;
-import de.jodamob.android.calendar.VisibleMonths;
-
-public class CalendarDataFactoryTest {
+public class CalendarDataFactoryImplTest {
 
     private static final int FIVE_ROWS = 5;
     private static final int SIX_ROWS = 6;
