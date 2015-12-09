@@ -13,13 +13,17 @@ import android.view.ViewGroup;
 public class CalendarAdapter extends RecyclerView.Adapter {
     private final int layout;
     private final LayoutInflater inflater;
-    protected final VisibleMonths data;
+    protected VisibleMonths data;
     private int selectedPosition = -1;
 
     public CalendarAdapter(@LayoutRes int layout, LayoutInflater inflater, VisibleMonths data) {
         this.layout = layout;
         this.inflater = inflater;
         this.data = data;
+    }
+
+    public void replace(@NonNull VisibleMonths months) {
+        this.data = months;
     }
 
     @Override

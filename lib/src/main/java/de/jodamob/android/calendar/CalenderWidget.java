@@ -109,9 +109,14 @@ public class CalenderWidget extends FrameLayout {
     }
 
     private void setContent(VisibleMonths months, CalendarBuilder factory) {
-        contentView.setLayoutManager(getLayoutManager());
-        adapter = factory.createAdapterFor(getLayoutInflater(), months);
-        contentView.setAdapter(adapter);
+        if (adapter == null) {
+            contentView.setLayoutManager(getLayoutManager());
+            adapter = factory.createAdapterFor(getLayoutInflater(), months);
+            contentView.setAdapter(adapter);
+        } else {
+            adapter.replace(months);
+            adapter.notifyDataSetChanged();
+        }
     }
 
     private void init() {
