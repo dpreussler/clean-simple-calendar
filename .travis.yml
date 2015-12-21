@@ -1,10 +1,11 @@
 language: android
-nguage: android
 jdk: oraclejdk7
 
 android:
   components:
     - build-tools-19.0.0 
-    - android-23
 
-script: ./gradlew assembleRelease --info
+script: 
+    - echo "Travis branch is $TRAVIS_BRANCH"
+    - echo "Travis branch is in pull request $TRAVIS_PULL+REQUEST"
+    - ./gradlew assembleRelease --info
