@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dpreussler/clean-simple-calendar.svg?branch=master)](https://travis-ci.org/dpreussler/clean-simple-calendar)
+
 # clean-simple-calendar
 Small simple android calendar implementation
 
@@ -19,6 +21,11 @@ This one is
 
 It is just the month widget, no navigation or similar.
 
+
+```groovy
+testCompile 'de.jodamob.android:clean-simple-calendar:1.0'
+ 
+```
 
 
 Quick start:
@@ -84,3 +91,8 @@ Screenshot from styled_sample with custom fields and selection
 Screenshot from simple_sample (Hebrew language)
 ![alt tag](https://cloud.githubusercontent.com/assets/2426606/11114236/73b46a84-8923-11e5-99ce-dcfa18c9bf4e.png)
 
+
+
+
+Licensed under MIT license
+(c) 2015 Danny Preussler
