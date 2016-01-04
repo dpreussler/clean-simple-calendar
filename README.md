@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/dpreussler/clean-simple-calendar.svg?branch=master)](https://travis-ci.org/dpreussler/clean-simple-calendar)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-clean--simple--calendar-green.svg?style=true)](https://android-arsenal.com/details/1/2946)
 
 # clean-simple-calendar
 Small simple android calendar implementation
