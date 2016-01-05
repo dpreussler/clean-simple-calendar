@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/dpreussler/clean-simple-calendar.svg?branch=master)](https://travis-ci.org/dpreussler/clean-simple-calendar)
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.jodamob.android/clean-simple-calendar/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.jodamob.android/clean-simple-calendar)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-clean--simple--calendar-green.svg?style=true)](https://android-arsenal.com/details/1/2946)
 [![](https://img.shields.io/badge/AndroidWeekly-%23185-green.svg)](http://androidweekly.net/issues/issue-185)
 # clean-simple-calendar
