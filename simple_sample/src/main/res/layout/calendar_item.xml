@@ -3,7 +3,7 @@
     android:id="@id/custom_cell"
     android:background="?android:selectableItemBackground"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@id/date_text"
@@ -11,5 +11,5 @@
         android:duplicateParentState="true"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 </FrameLayout>
