@@ -4,19 +4,19 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-clean--simple--calendar-green.svg?style=true)](https://android-arsenal.com/details/1/2946)
 [![](https://img.shields.io/badge/AndroidWeekly-%23185-green.svg)](http://androidweekly.net/issues/issue-185)
 # clean-simple-calendar
-Small simple android calendar implementation
+Small simple Android calendar implementation
 
-Time-Square is the ultimate calendar but a but hard to customize
+Time-Square is the ultimate calendar but hard to customize.
 The alternative Caldroid is based on really unclean code, hard to change, hard to test.
-Also it is used custom selection logic instead of using selection and disabled states of the views.
+Also, custom selection logic is used instead of using selection and disabled states of the views.
 
 
 This one is
 * a simple view, not a fragment
 * item layout xml provided by developer, not included
-* supports i8n by different starting days of week
+* supports i18n by different starting days of week
 * support selection (style via xml selected state)
-* shows last/first days of surrounding months where needed (row count configurable, style via xml disabled-state)
+* shows last/first days of surrounding months where needed (row count configurable, style via xml disabled state)
 * marks today
 * supports adding custom view holder and adapters but not needed (see styled_sample)
 * no multiselect
@@ -33,7 +33,7 @@ testCompile 'de.jodamob.android:clean-simple-calendar:1.0'
 
 Quick start:
 ============
-Add the 'CalendarWidget' to your layout.
+Add the `CalendarWidget` to your layout.
 Call 
 
 ```java
@@ -55,10 +55,10 @@ done.
 
 The layouts must have the following items:
 
-the header layout (day names) must contain one textView with id 'R.id.day' (see the 'ids.xml')
+the header layout (day names) must contain one textView with id `R.id.day` (see the _ids.xml_)
 the content (day numbers) must contain:
-a 'TextView' with id 'R.id.date_text'
-and any kind of 'View' with id 'R.id.custom_cell' that will be used to set selected state (and disabled state for start/end of non-current month date)
+a `TextView` with id `R.id.date_text`
+and any kind of `View` with id `R.id.custom_cell` that will be used to set selected state (and disabled state for start/end of non-current month date)
 
 
 example:
