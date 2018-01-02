@@ -50,7 +50,7 @@ jacoco {
     toolVersion = "0.7.9"
 }
 
-task jacocoTestReport(type: JacocoReport, dependsOn: ["testDebugUnitTest", "createDebugCoverageReport"]) {
+task codeCoverageReport(type: JacocoReport, dependsOn: ["testDebugUnitTest", "createDebugCoverageReport"]) {
 
     group = "Reporting"
     description = "Generate Jacoco coverage reports for Debug build"
@@ -80,22 +80,6 @@ task jacocoTestReport(type: JacocoReport, dependsOn: ["testDebugUnitTest", "crea
     // sources
     sourceDirectories = files([android.sourceSets.main.java.srcDirs])
     executionData = files("$buildDir/jacoco/testDebugUnitTest.exec")
-}
-
-
-task codeCoverageReport(type: jacocoTestReport) {
-    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
-
-    subprojects.each {
-        sourceSets it.sourceSets.main
-    }
-
-    reports {
-        xml.enabled true
-        xml.destination "${buildDir}/reports/jacoco/report.xml"
-        html.enabled true
-        csv.enabled false
-    }
 }
 
 codeCoverageReport.dependsOn {
