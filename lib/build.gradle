@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'jacoco'
 
 def projectName="clean-simple-calendar"
 
@@ -44,6 +45,9 @@ dependencies {
     testCompile 'org.mockito:mockito-core:1.10.19'
     testCompile 'org.easytesting:fest-assert-core:2.0M10'
 
+}
+jacoco {
+    toolVersion = "0.7.9"
 }
 
 task jacocoTestReport(type: JacocoReport, dependsOn: ["testDebugUnitTest", "createDebugCoverageReport"]) {
