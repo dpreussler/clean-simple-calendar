@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'jacoco'
 
 def projectName="clean-simple-calendar"
 
@@ -19,8 +20,17 @@ android {
         }
     }
 
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+    }
+
     testOptions {
-        unitTests.returnDefaultValues = true
+        unitTests {
+            returnDefaultValues = true
+        }
     }
 
     libraryVariants.all { variant ->
@@ -36,7 +46,6 @@ android {
 
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:recyclerview-v7:23.2.1'
     compile 'com.android.support:support-annotations:23.2.1'
 
@@ -45,6 +54,44 @@ dependencies {
     testCompile 'org.easytesting:fest-assert-core:2.0M10'
 
 }
+jacoco {
+    toolVersion = "0.7.9"
+}
+
+task codeCoverageReport(type: JacocoReport, dependsOn: ["testDebug"]) {
+
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports for Debug build"
+
+    reports {
+        xml.enabled = true
+        xml.destination "${buildDir}/reports/jacoco/report.xml"
+        html.enabled = true
+    }
+
+    // what to exclude from coverage report
+    // UI, "noise", generated classes, platform classes, etc.
+    def excludes = [
+            '**/R.class',
+            '**/R$*.class',
+            '**/BuildConfig.*',
+            '**/Manifest*.*',
+            '**/*Test*.*',
+            '**/*Fragment.*',
+            '**/*Activity.*'
+    ]
+    // generated classes
+    classDirectories = fileTree(
+            dir: "$buildDir/intermediates/classes/debug",
+            excludes: excludes
+    )
+
+    // sources
+    sourceDirectories = files([android.sourceSets.main.java.srcDirs])
+    executionData = files("$buildDir/jacoco/testDebug.exec")
+}
 
 apply from: 'https://raw.githubusercontent.com/shamanland/gradle-mvn-push/cc18d56549cdea03f744b6fff27911569394073e/gradle-mvn-push.gradle'
+
+
 
