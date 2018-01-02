@@ -20,8 +20,17 @@ android {
         }
     }
 
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+    }
+
     testOptions {
-        unitTests.returnDefaultValues = true
+        unitTests {
+            returnDefaultValues = true
+        }
     }
 
     libraryVariants.all { variant ->
@@ -49,7 +58,7 @@ jacoco {
     toolVersion = "0.7.9"
 }
 
-task codeCoverageReport(type: JacocoReport, dependsOn: ["testDebugUnitTest", "createDebugCoverageReport"]) {
+task codeCoverageReport(type: JacocoReport, dependsOn: ["testDebug"]) {
 
     group = "Reporting"
     description = "Generate Jacoco coverage reports for Debug build"
@@ -78,11 +87,7 @@ task codeCoverageReport(type: JacocoReport, dependsOn: ["testDebugUnitTest", "cr
 
     // sources
     sourceDirectories = files([android.sourceSets.main.java.srcDirs])
-    executionData = files("$buildDir/jacoco/testDebugUnitTest.exec")
-}
-
-codeCoverageReport.dependsOn {
-    subprojects*.test
+    executionData = files("$buildDir/jacoco/testDebug.exec")
 }
 
 apply from: 'https://raw.githubusercontent.com/shamanland/gradle-mvn-push/cc18d56549cdea03f744b6fff27911569394073e/gradle-mvn-push.gradle'
