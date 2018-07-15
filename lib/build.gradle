@@ -4,12 +4,11 @@ apply plugin: 'jacoco'
 def projectName="clean-simple-calendar"
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 27
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -33,24 +32,24 @@ android {
         }
     }
 
-    libraryVariants.all { variant ->
-        variant.outputs.each { output ->
-            def outputFile = output.outputFile
-            if (outputFile != null && outputFile.name.endsWith('.aar')) {
-                def fileName = "${projectName}-${defaultConfig.versionName}.aar"
-                output.outputFile = new File(outputFile.parent, fileName)
-            }
-        }
-    }
+//    libraryVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.aar')) {
+//                def fileName = "${projectName}-${defaultConfig.versionName}.aar"
+//                output.outputFile = new File(outputFile.parent, fileName)
+//            }
+//        }
+//    }
 }
 
 
 dependencies {
-    compile 'com.android.support:recyclerview-v7:23.2.1'
-    compile 'com.android.support:support-annotations:23.2.1'
+    compile 'com.android.support:recyclerview-v7:27.1.1'
+    compile 'com.android.support:support-annotations:27.1.1'
 
     testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-core:1.10.19'
+    testCompile 'org.mockito:mockito-core:2.8.9'
     testCompile 'org.easytesting:fest-assert-core:2.0M10'
 
 }
